@@ -2,11 +2,11 @@
 ===============================
 
 環境建立法
-1. git clone git://github.com/ronnywang/heroku-ircbot.git
-2. cd heroku-ircbot
-3. git remote add heroku git@heroku.com:your-ircbot-app
-4. heroku config:set IRC\_HOST=irc.freenode.net IRC\_USER=your\_bot\_nick IRC\_CHANNELS=#your\_channel\_1,#your\_channel\_2 SECRET=your\_secret
-3. git push heroku master
+1.  git clone git://github.com/ronnywang/heroku-ircbot.git
+2.  cd heroku-ircbot
+3.  git remote add heroku git@heroku.com:your-ircbot-app
+4.  heroku config:set IRC\_HOST=irc.freenode.net IRC\_USER=your\_bot\_nick IRC\_CHANNELS=#your\_channel\_1,#your\_channel\_2 SECRET=your\_secret
+3.  git push heroku master
 
 這樣子就建立好環境了, 如果到 http://your-irc-app.herokuapp.com/ 裡面有看到 error 就表示成功了
 
