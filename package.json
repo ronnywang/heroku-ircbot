@@ -1,0 +1,11 @@
+{
+    "name": "node-ircbot",
+    "version": "0.0.1",
+    "dependencies": {
+        "irc": "0.3.4"
+    },
+    "engines": {
+        "node": "0.8.x",
+        "npm": "1.1.x"
+    }
+}
