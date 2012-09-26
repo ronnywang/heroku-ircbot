@@ -13,7 +13,6 @@
 
 PHP Sample:
     
-    {{lang:php}}
     <?php
     $now = time();
     $message = 'Your Message';
