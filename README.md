@@ -1,7 +1,8 @@
 在 Heroku 上面跑一隻 IRC 機器人
 ===============================
 
-環境建立法
+環境建立法:
+
 1.  git clone git://github.com/ronnywang/heroku-ircbot.git
 2.  cd heroku-ircbot
 3.  git remote add heroku git@heroku.com:your-ircbot-app
