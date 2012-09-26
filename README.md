@@ -5,7 +5,7 @@
 
 1.  git clone git://github.com/ronnywang/heroku-ircbot.git
 2.  cd heroku-ircbot
-3.  git remote add heroku git@heroku.com:your-ircbot-app
+3.  git remote add heroku git@heroku.com:your-ircbot-app.git
 4.  heroku config:set IRC\_HOST=irc.freenode.net IRC\_USER=your\_bot\_nick IRC\_CHANNELS=#your\_channel\_1,#your\_channel\_2 SECRET=your\_secret
 3.  git push heroku master
 
