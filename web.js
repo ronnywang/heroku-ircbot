@@ -33,24 +33,26 @@ http.createServer(function (req, res) {
         return res.end('no channel');
     }
 
-    if ('string' != typeof(query.timestamp)) {
-        return res.end('no timestamp');
-    }
+    if (settings.secret) {
+        if ('string' != typeof(query.timestamp)) {
+            return res.end('no timestamp');
+        }
 
-    if (Math.abs(1000 * parseInt(query.timestamp) - (new Date()).getTime()) > 300 * 1000) {
-        return res.end('expired');
-    }
+        if (Math.abs(1000 * parseInt(query.timestamp) - (new Date()).getTime()) > 300 * 1000) {
+            return res.end('expired');
+        }
 
-    if ('string' != typeof(query.sig)) {
-        return res.end('no sig');
-    }
+        if ('string' != typeof(query.sig)) {
+            return res.end('no sig');
+        }
 
-    var md5_crypto = crypto.createHash('md5');
-    md5_crypto.update(query.message + settings.secret + query.timestamp + query.channel);
-    var sig = md5_crypto.digest('hex');
+        var md5_crypto = crypto.createHash('md5');
+        md5_crypto.update(query.message + settings.secret + query.timestamp + query.channel);
+        var sig = md5_crypto.digest('hex');
 
-    if (sig != query.sig) {
-        return res.end('sig error');
+        if (sig != query.sig) {
+            return res.end('sig error');
+        }
     }
 
     client.say(query.channel, query.message);
